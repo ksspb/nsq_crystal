@@ -103,7 +103,12 @@ module Nsq
       # Choose a random Connection that's currently connected
       # Or, if there's nothing connected, just take any random one
       connections_currently_connected = connections.select { |_, c| c.connected? }
-      connection = connections_currently_connected.values.sample || connections.values.sample
+      # connection = connections_currently_connected.values.sample || connections.values.sample
+      connection = if (cns = connections_currently_connected.values).size > 0
+                     cns.sample
+                   elsif (cns = connections.values).size > 0
+                     cns.sample
+                   end
 
       # Raise an exception if there's no connection available
       unless connection
