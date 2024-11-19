@@ -1,8 +1,9 @@
 name: nsq
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Pete Brumm <pete@petebrumm.com>
+  - Sergey Konopatov <serega25@gmail.com>
 
 crystal: 1.0.0
 
