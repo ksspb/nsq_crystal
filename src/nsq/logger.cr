@@ -5,23 +5,23 @@ module Nsq
     end
 
     def fatal(msg)
-      # Nsq.logger.send(:fatal, "#{self.class.name} #{msg}")
+      Nsq.logger.send(:fatal, "#{self.class.name} #{msg}")
     end
 
     def error(msg)
-      # Nsq.logger.send(:error, "#{self.class.name} #{msg}")
+      Nsq.logger.send(:error, "#{self.class.name} #{msg}")
     end
 
     def warn(msg)
-      # Nsq.logger.send(:warn, "#{self.class.name} #{msg}")
+      Nsq.logger.send(:warn, "#{self.class.name} #{msg}")
     end
 
     def info(msg)
-      # Nsq.logger.send(:info, "#{self.class.name} #{msg}")
+      Nsq.logger.send(:info, "#{self.class.name} #{msg}")
     end
 
     def debug(msg)
-      # Nsq.logger.send(:debug, "#{self.class.name} #{msg}")
+      Nsq.logger.send(:debug, "#{self.class.name} #{msg}")
     end
 
     # [:fatal, :error, :warn, :info, :debug].each do |level|
